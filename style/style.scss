@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* spacing */
+  --spacing-3xs: 2px;
+  --spacing-2xs: 4px;
+  --spacing-xs: 6px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 28px;
+  --spacing-4xl: 32px;
+  --spacing-5xl: 36px;
+  --spacing-6xl: 40px;
+  --spacing-7xl: 44px;
+  --spacing-8xl: 48px;
+  --spacing-9xl: 56px;
+  --spacing-10xl: 64px;
+  --spacing-section: 120px;
+  --spacing-full: 999px;
+
+  /* colors */
+  --primary-main: #7562d9;
+
+  --white-full: rgba(255, 255, 255, 1);
+  --white-800: rgba(255, 255, 255, 0.8);
+  --white-600: rgba(255, 255, 255, 0.6);
+  --white-400: rgba(255, 255, 255, 0.4);
+
+  /* background */
+  --background: #070523;
+
+  /* font-size */
+  --font-size-h1: 1.75rem;
+  --font-size-h2: 1.25rem;
+  --font-size-p: 0.875rem;
+  --font-size-item: 0.75rem;
+
+  /* font-weight */
+  --font-weight-h1-h2: 800;
+  --font-weight-lighth2-p: 400;
+  --font-weight-item: 700;
+}
+
+/* text classes */
+h1,
+h2 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1-h2);
+  color: var(--white-full);
+  text-transform: uppercase;
+}
+p {
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-lh2-p);
+  color: var(--white-600);
+}
+.item {
+  font-size: var(--font-size-item);
+  font-weight: var(--font-weight-item);
+  text-transform: uppercase;
+  color: var(--white-full);
+  cursor: pointer;
+}
+
+.light {
+  font-weight: var(--font-weight-lh2-p);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* components */
+button {
+  all: unset;
+  display: flex;
+  padding: var(--spacing-md) var(--spacing-3xl);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-4xl);
+  color: var(--white-full);
+  text-transform: uppercase;
+}
+.primary {
+  background: var(--primary-main);
+}
+.white {
+  border: 1px solid var(--white-full);
+}
+.card {
+  display: flex;
+  width: 300px;
+  height: 392px;
+  padding: var(--spacing-xl, 20px);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: var(--spacing-2xs);
+}
+
+// structure
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  padding: var(--spacing-8xl, 48px) var(--spacing-3xl, 28px);
+  flex-direction: column;
+  align-items: center;
+
+  background: url(../ASSETS/header-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  & .header-content {
+    display: flex;
+    width: 100%;
+    max-width: 980px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-7xl);
+    flex: 1 0 0;
+
+    & .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 100%;
+
+      & .logo {
+        width: 65px;
+        height: 24.5px;
+      }
+
+      & .nav {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-6xl);
+      }
+
+      & .actions {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+      }
+    }
+
+    & .title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1 0 0;
+      width: 100%;
+      height: 100%;
+
+      & .title-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-6xl);
+      }
+
+      & .title-image {
+        width: 380px;
+        height: 330.5px;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  padding: var(--spacing-8xl) var(--spacing-3xl) var(--spacing-section)
+    var(--spacing-3xl);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  background: var(--background);
+
+  & .container {
+    display: flex;
+    max-width: 980px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-section);
+    width: 100%;
+
+    & .after-h {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-10xl);
+      width: 100%;
+
+      & .after-h-image {
+        width: 378px;
+        height: 457px;
+      }
+
+      & .after-h-title {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-4xl);
+        flex: 1 0 0;
+      }
+    }
+
+    & .game-modes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-6xl);
+      width: 100%;
+
+      & .game-modes-selection {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: var(--spacing-2xl);
+
+        & .mode {
+          display: flex;
+          align-items: center;
+          flex: 1 0 0;
+          width: 100%;
+          padding: var(--spacing-md);
+          border: 1px solid var(--white-400);
+
+          & .overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              0deg,
+              rgba(10, 6, 38, 1) 19%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            padding: var(--spacing-xl);
+            transition: all 0.3s ease-in-out;
+
+            position: absolute;
+            bottom: -28%;
+
+            & img {
+              width: 65px;
+            }
+
+            & .description {
+              display: flex;
+              flex-direction: column;
+              gap: var(--spacing-md);
+            }
+          }
+
+          & [class*="mode-"] {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 392px;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            gap: var(--spacing-2xs);
+            flex: 1 0 0;
+            overflow: hidden;
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &:hover .overlay {
+              bottom: 0;
+            }
+          }
+
+          & .mode-1 {
+            background-image: url(../ASSETS/deathmatch.png);
+          }
+          & .mode-2 {
+            background-image: url(../ASSETS/free-for-all.png);
+          }
+          & .mode-3 {
+            background-image: url(../ASSETS/domination.jpg);
+            & .overlay {
+              bottom: -33%;
+            }
+          }
+        }
+      }
+    }
+
+    & .join-battle {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 250px;
+      min-height: 150px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-md);
+
+      border-radius: var(--spacing-full);
+      background: url(../ASSETS/join-battle.jpg);
+      background-position: center;
+
+      & button {
+        position: absolute;
+        translate: -50%;
+        left: 50%;
+        bottom: -20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    & .header-content {
+      display: flex;
+      width: 100%;
+      max-width: 980px;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-7xl);
+      flex: 1 0 0;
+
+      & .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        & .nav {
+          display: none;
+        }
+
+        & .actions {
+          display: flex;
+          align-items: flex-start;
+          gap: var(--spacing-md);
+        }
+      }
+
+      & .title-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: var(--spacing-3xl);
+
+        & .title-content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: var(--spacing-6xl);
+        }
+
+        & .title-image {
+          width: 444px;
+          height: 386px;
+        }
+
+        & .button {
+          align-self: center;
+          justify-self: center;
+        }
+      }
+    }
+  }
+
+  main {
+    & .container {
+      & .after-h {
+        flex-direction: column;
+        justify-content: center;
+
+        & .after-h-image {
+          width: 444px;
+          height: 537px;
+        }
+      }
+
+      & .game-modes {
+        align-items: flex-start;
+
+        & .game-modes-selection {
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+        }
+      }
+
+      & .join-battle {
+        border-radius: var(--spacing-10xl);
+        text-align: center;
+
+        & button {
+          position: absolute;
+          translate: -50%;
+          left: 50%;
+          bottom: -20px;
+        }
+      }
+    }
+  }
+}
